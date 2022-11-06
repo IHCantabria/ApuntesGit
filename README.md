@@ -11,3 +11,7 @@ La documentación está accesible a través de la URL: [https://ihcantabria.gith
 ## Contacto
 
 La documentación está mantenida por [Felipe Maza](https://ihcantabria.com/directorio-personal/tecnologo/felipe-maza-fernandez/).
+
+## Licencia
+
+Bajo licencia GPL v3.
