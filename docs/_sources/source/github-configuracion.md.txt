@@ -1,0 +1,12 @@
+# Configuración para Github
+
+Antes de poder trabajar con los repositorios de GitHub que tiene el IH debemos realizar una serie de pasos:
+
+## Registro en GitHub
+
+GitHub funciona totalmente independiente a unican, por tanto debemos crearnos un nuevo usuario que no va a tener relación con el existente de unican.  
+Al registrarnos podemos elegir un nombre de usuario que no tiene por qué coincidir con el de unican, lo mismo con el email y, por supuesto, la contraseña a utilizar.
+
+Una vez tengamos la cuenta creada, nos deben dar de alta en la organización creada dentro de GitHub, para ello mandamos un email a felipe.maza@unican.es con el nombre de usuario que hayáis elegido, y al grupo de trabajo al que pertenecéis.
+
+Una vez dados de alta, tendremos acceso de lectura a todos los repositorios existentes en el IH, y en los repositorios de vuestro grupo tendréis también para escritura.

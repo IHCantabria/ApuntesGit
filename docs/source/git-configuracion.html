@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuración de git &mdash; documentación de Curso git - curso-git</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Configuración para Github" href="github/configuracion.html" />
+    <link rel="prev" title="GitHub" href="github/que-es.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Curso git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que-es-y-para-que-sirve.html">Qué es y para qué sirve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comandos.html">Características y comandos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github/que-es.html">GitHub</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuración de git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuracion-minima">Configuración mínima</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#otras-configuraciones">Otras configuraciones</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="github/configuracion.html">Configuración para Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enlaces.html">Enlaces</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Configuración de git</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/git-configuracion.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuracion-de-git">
+<h1>Configuración de git<a class="headerlink" href="#configuracion-de-git" title="Enlace permanente a este encabezado"></a></h1>
+<section id="configuracion-minima">
+<h2>Configuración mínima<a class="headerlink" href="#configuracion-minima" title="Enlace permanente a este encabezado"></a></h2>
+<p>La configuración general de git la encontramos en el fichero <code class="docutils literal notranslate"><span class="pre">~/.gitconfig</span></code>.</p>
+<p>Los datos mínimos que tenemos que tener configurados son:</p>
+<ul class="simple">
+<li><p>Datos de usuario, para saber quién es el autor del commit y su email.</p></li>
+<li><p>Rama por defecto, el nombre por defecto cuando trabajamos con un repositorio (usaremos <code class="docutils literal notranslate"><span class="pre">main</span></code>).</p></li>
+<li><p>Editor a utilizar por defecto, podemos configurar <code class="docutils literal notranslate"><span class="pre">vim</span></code>, <code class="docutils literal notranslate"><span class="pre">nano</span></code>, <code class="docutils literal notranslate"><span class="pre">notepad</span></code> o cualquiera con el que estemos cómodos trabajando.</p></li>
+</ul>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[user]</span><span class="w"></span>
+<span class="w">        </span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">felipe.maza@unican.es</span><span class="w"></span>
+<span class="w">        </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Felipe Maza</span><span class="w"></span>
+<span class="k">[init]</span><span class="w"></span>
+<span class="w">        </span><span class="na">defaultBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">main</span><span class="w"></span>
+<span class="k">[core]</span><span class="w"></span>
+<span class="w">        </span><span class="na">editor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">vim</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="otras-configuraciones">
+<h2>Otras configuraciones<a class="headerlink" href="#otras-configuraciones" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p>Coloreado de código</p></li>
+</ul>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[color]</span><span class="w"></span>
+<span class="w">    </span><span class="na">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">auto</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Alias. Crea abreviaturas para comandos más extensos y complejos</p></li>
+</ul>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[alias]</span><span class="w"></span>
+<span class="w">    </span><span class="na">co</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">checkout</span><span class="w"></span>
+<span class="w">    </span><span class="na">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">status</span><span class="w"></span>
+
+<span class="w">    </span><span class="na">lg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39; --all</span><span class="w"></span>
+<span class="w">    </span><span class="na">lg2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n&#39;&#39;          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)&#39; --all</span><span class="w"></span>
+<span class="w">    </span><span class="na">lg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">!&quot;git lg1&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="na">undo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">reset --soft HEAD^ </span><span class="w"></span>
+<span class="w">    </span><span class="c1"># ¡Cuidado! Si ya has hecho un push, habrá problemas al reescribir el historial</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt</span><span class="w"></span>
+
+<span class="w">    </span><span class="na">stash-all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">stash save --include-untracked</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># https://git-scm.com/docs/git-stash</span><span class="w"></span>
+<span class="w">      </span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="github/que-es.html" class="btn btn-neutral float-left" title="GitHub" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="github/configuracion.html" class="btn btn-neutral float-right" title="Configuración para Github" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Felipe Maza.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

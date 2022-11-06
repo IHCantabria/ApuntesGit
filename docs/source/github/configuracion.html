@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuración para Github &mdash; documentación de Curso git - curso-git</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Enlaces" href="../enlaces.html" />
+    <link rel="prev" title="Configuración de git" href="../git-configuracion.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Curso git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../que-es-y-para-que-sirve.html">Qué es y para qué sirve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos.html">Características y comandos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="que-es.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-configuracion.html">Configuración de git</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuración para Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#registro-en-github">Registro en GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vincular-clave-ssh">Vincular clave SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../enlaces.html">Enlaces</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Curso git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Configuración para Github</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/github/configuracion.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuracion-para-github">
+<h1>Configuración para Github<a class="headerlink" href="#configuracion-para-github" title="Enlace permanente a este encabezado"></a></h1>
+<p>Antes de poder trabajar con los repositorios de GitHub que tiene el IH debemos realizar una serie de pasos:</p>
+<section id="registro-en-github">
+<h2>Registro en GitHub<a class="headerlink" href="#registro-en-github" title="Enlace permanente a este encabezado"></a></h2>
+<p>GitHub funciona totalmente independiente a unican, por tanto debemos crearnos un nuevo usuario que no va a tener relación con el existente de unican.<br />
+Al registrarnos podemos elegir un nombre de usuario que no tiene por qué coincidir con el de unican, lo mismo con el email y, por supuesto, la contraseña a utilizar.</p>
+<p>Una vez tengamos la cuenta creada, nos deben dar de alta en la organización creada dentro de GitHub, para ello mandamos un email a felipe.maza&#64;unican.es con el nombre de usuario que hayáis elegido, y al grupo de trabajo al que pertenecéis.</p>
+<p>Una vez dados de alta, tendremos acceso de lectura a todos los repositorios existentes en el IH, y en los repositorios de vuestro grupo tendréis también para escritura.</p>
+</section>
+<section id="vincular-clave-ssh">
+<h2>Vincular clave SSH<a class="headerlink" href="#vincular-clave-ssh" title="Enlace permanente a este encabezado"></a></h2>
+<p>Para que nuestro programa de <code class="docutils literal notranslate"><span class="pre">git</span></code> pueda conectarse fácilmente con GitHub debemos configurar claves <code class="docutils literal notranslate"><span class="pre">SSH</span></code>. En caso de que no las tengamos, debemos generar unas nuevas:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Generating</span> <span class="n">public</span><span class="o">/</span><span class="n">private</span> <span class="n">ed25519</span> <span class="n">key</span> <span class="n">pair</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">to</span> <span class="n">save</span> <span class="n">the</span> <span class="n">key</span> <span class="p">(</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mazaf</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="p">):</span> 
+<span class="n">Enter</span> <span class="n">passphrase</span> <span class="p">(</span><span class="n">empty</span> <span class="k">for</span> <span class="n">no</span> <span class="n">passphrase</span><span class="p">):</span> 
+<span class="n">Enter</span> <span class="n">same</span> <span class="n">passphrase</span> <span class="n">again</span><span class="p">:</span> 
+<span class="n">Your</span> <span class="n">identification</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="ow">in</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mazaf</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span>
+<span class="n">Your</span> <span class="n">public</span> <span class="n">key</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="ow">in</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mazaf</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="o">.</span><span class="n">pub</span>
+<span class="n">The</span> <span class="n">key</span> <span class="n">fingerprint</span> <span class="ow">is</span><span class="p">:</span>
+<span class="n">SHA256</span><span class="p">:</span><span class="n">wXt4cQ</span><span class="o">/</span><span class="n">lP3EA</span><span class="o">+</span><span class="n">Pmn3g</span><span class="o">/</span><span class="n">Y4HCi8stuGM</span><span class="o">//</span><span class="n">kjZ1MaumAX4</span> <span class="n">mazaf</span><span class="nd">@IHPC20</span>
+<span class="n">The</span> <span class="n">key</span><span class="s1">&#39;s randomart image is:</span>
+<span class="o">+--</span><span class="p">[</span><span class="n">ED25519</span> <span class="mi">256</span><span class="p">]</span><span class="o">--+</span>
+<span class="o">|</span>           <span class="o">...</span><span class="n">o</span>  <span class="o">|</span>
+<span class="o">|</span>       <span class="o">.</span>  <span class="o">.</span>  <span class="n">o</span> <span class="o">.</span> <span class="o">|</span>
+<span class="o">|</span>        <span class="n">o</span> <span class="o">..</span><span class="n">o</span><span class="o">....|</span>
+<span class="o">|</span>         <span class="o">+</span> <span class="n">oooo</span><span class="o">.</span><span class="n">o</span><span class="o">|</span>
+<span class="o">|</span>        <span class="n">S</span> <span class="o">=</span> <span class="n">o</span><span class="o">..=.|</span>
+<span class="o">|</span>      <span class="o">..</span> <span class="o">=</span> <span class="o">=.++</span> <span class="n">o</span><span class="o">|</span>
+<span class="o">|</span>      <span class="o">.=</span><span class="n">o</span> <span class="n">Eooooo</span> <span class="o">|</span>
+<span class="o">|</span>      <span class="o">.++.=.</span><span class="n">o</span> <span class="o">.</span><span class="n">o</span> <span class="o">|</span>
+<span class="o">|</span>       <span class="n">o</span><span class="o">=+</span><span class="n">o</span><span class="o">*...</span> <span class="o">+|</span>
+<span class="o">+----</span><span class="p">[</span><span class="n">SHA256</span><span class="p">]</span><span class="o">-----+</span>
+</pre></div>
+</div>
+<p>Cuando nos pida la contraseña, podemos dejar el campo vacío, pues para utilizar las claves previamente hemos debido desbloquear nuestra cuenta unican.</p>
+<p>Ahora tendremos dos ficheros dentro de la carpeta <code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code>: <code class="docutils literal notranslate"><span class="pre">id_ed25519</span></code> y <code class="docutils literal notranslate"><span class="pre">id_ed25519.pub</span></code>.</p>
+<p>El contenido del fichero público debemos copiarlo a nuestra cuenta</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF21VhCkpHPYM9v/QYDLj23xXuX2m7NpUZh283OHKMaJ mazaf@IHPC20
+</pre></div>
+</div>
+<p>En la página de <a class="reference external" href="https://github.com/settings/profile">configuración de nuestro usuario</a> en GitHub, tenemos una sección llamada <a class="reference external" href="https://github.com/settings/keys">SSH and GPG Keys</a>.</p>
+<p>Damos sobre New SSH Key y en la caja de texto <code class="docutils literal notranslate"><span class="pre">key</span></code> copiamos la clave (toda la línea, completa).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../git-configuracion.html" class="btn btn-neutral float-left" title="Configuración de git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../enlaces.html" class="btn btn-neutral float-right" title="Enlaces" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Felipe Maza.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
