@@ -19,3 +19,4 @@ Apuntes de git
    source/buenas-practicas.md
    source/enlaces.md
 
+.. include:: README.md

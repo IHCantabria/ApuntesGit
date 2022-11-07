@@ -21,3 +21,21 @@ Existen diferentes niveles de acceso a un repositio, los principales son:
 - Read, puede consultar todo el repositorio pero no puede subir sus cambios.
 - Write, además de leer, puede subir nuevos cambios, gestionar incidencias y pull request.
 - Admin, además de los permisos de escribir, puede añadir nuevos modificar la configuración del repositorio y añadir colaboradores.
+
+## Cambiando propietario o nombre de proyecto
+
+Cuando cambiamos el propietario o el nombre del proyecto, la URL del repositorio remoto también cambia, por ello debemos quitar el vínculo existente y añadir el nuevo.
+
+Retirar el vínculo obsoleto:
+
+```sh
+git remote remove origin
+```
+
+Y añadimos el nuevo:
+
+```sh
+git remote add origin git@github.com:IHCantabria/NombreDelRepositorio.git
+```
+
+La palabra `origin` que se utiliza en ambos casos es el alias por defecto que se le asigna al repositorio remoto principal. Un repositorio git puede estar vinculado con diferentes repositorios remotos.

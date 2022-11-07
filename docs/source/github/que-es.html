@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub &mdash; documentación de Curso git - curso-git</title>
+  <title>GitHub &mdash; documentación de Apuntes git - ApuntesGit</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Curso git
+            <a href="../../index.html" class="icon icon-home"> Apuntes git
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -47,11 +47,13 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">GitHub</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#que-es">Qué es</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gestion-y-permisos-de-repositorios">Gestión y permisos de repositorios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cambiando-propietario-o-nombre-de-proyecto">Cambiando propietario o nombre de proyecto</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../git-configuracion.html">Configuración de git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuracion.html">Configuración para Github</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../flujo-trabajo.html">Flujo de trabajo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../buenas-practicas.html">Buenas prácticas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../enlaces.html">Enlaces</a></li>
 </ul>
 
@@ -61,7 +63,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Curso git</a>
+          <a href="../../index.html">Apuntes git</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -102,6 +104,19 @@ Realizamos un backup periódicamente.</p>
 <li><p>Write, además de leer, puede subir nuevos cambios, gestionar incidencias y pull request.</p></li>
 <li><p>Admin, además de los permisos de escribir, puede añadir nuevos modificar la configuración del repositorio y añadir colaboradores.</p></li>
 </ul>
+</section>
+<section id="cambiando-propietario-o-nombre-de-proyecto">
+<h2>Cambiando propietario o nombre de proyecto<a class="headerlink" href="#cambiando-propietario-o-nombre-de-proyecto" title="Enlace permanente a este encabezado"></a></h2>
+<p>Cuando cambiamos el propietario o el nombre del proyecto, la URL del repositorio remoto también cambia, por ello debemos quitar el vínculo existente y añadir el nuevo.</p>
+<p>Retirar el vínculo obsoleto:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git remote remove origin
+</pre></div>
+</div>
+<p>Y añadimos el nuevo:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git remote add origin git@github.com:IHCantabria/NombreDelRepositorio.git
+</pre></div>
+</div>
+<p>La palabra <code class="docutils literal notranslate"><span class="pre">origin</span></code> que se utiliza en ambos casos es el alias por defecto que se le asigna al repositorio remoto principal. Un repositorio git puede estar vinculado con diferentes repositorios remotos.</p>
 </section>
 </section>
 
