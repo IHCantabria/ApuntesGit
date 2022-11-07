@@ -18,5 +18,3 @@ Apuntes de git
    source/flujo-trabajo.md
    source/buenas-practicas.md
    source/enlaces.md
-
-.. include:: README.md

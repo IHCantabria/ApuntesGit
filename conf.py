@@ -17,7 +17,7 @@ release = 'ApuntesGit'
 extensions = ["myst_parser"]
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'docs', 'README.md']
 
 language = 'es'
 
