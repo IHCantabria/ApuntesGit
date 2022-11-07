@@ -24,6 +24,24 @@ Si usamos trello o planner, normalmente aquí enumeramos el título de las tarje
 
 ![Changelog](imgs/changelog.png)
 
+## Subir ficheros binarios
+
+Para compartir ficheros binarios, como pueden ser datos de input del modelo, en lugar de añadirlos al repositorio como si fuera código fuente, debemos adjuntarlos (podemos juntarlos en un zip) cuando publicamos una nueva release.
+
+Los pasos son:
+
+- Etiquetar la versión del proyecto
+- En la web del proyecto, vamos a la sección de tags (https://github.com/IHCantabria/NombreDelProyecto/tags)
+- Selecionamos el tag y en las opciones disponibles está _Create release_.
+- Asignamos como nombre de release el mismo que tiene como tag, una descripción y debajo de esa caja de texto tendremos la opción de adjuntar binarios.
+- En el README, donde explicamos cómo instalar y usar el proyecto, especificaremos qué deben hacer con esos ficheros.
+
+Nota: Cuando lancemos una nueva release, deberemos adjuntar de nuevo los ficheros.
+
+En la siguiente ventana vemos cómo para una versión disponemos del código fuente -en formato zip y tar.gz-, y otros dos ficheros que son los binarios que hemos adjuntado.
+
+![release con binarios](imgs/release-binarios.png)
+
 ## Otras buenas prácticas
 
 - `Commits` deben tener un objetivo específico. Evitar resolver dos problemas en el mismo `commit`.

@@ -51,6 +51,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Buenas prácticas</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#readme-md">README.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#changelog-md">Changelog.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subir-ficheros-binarios">Subir ficheros binarios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#otras-buenas-practicas">Otras buenas prácticas</a></li>
 </ul>
 </li>
@@ -103,6 +104,21 @@
 Aunque la información podría consultarse en el <code class="docutils literal notranslate"><span class="pre">log</span></code>, aquí encontraremos un resumen fácil de leer y enumerando simplemente las nuevas funcionalidad o correcciones de cada versión.<br />
 Si usamos trello o planner, normalmente aquí enumeramos el título de las tarjetas realizadas.</p>
 <p><img alt="Changelog" src="../_images/changelog.png" /></p>
+</section>
+<section id="subir-ficheros-binarios">
+<h2>Subir ficheros binarios<a class="headerlink" href="#subir-ficheros-binarios" title="Enlace permanente a este encabezado"></a></h2>
+<p>Para compartir ficheros binarios, como pueden ser datos de input del modelo, en lugar de añadirlos al repositorio como si fuera código fuente, debemos adjuntarlos (podemos juntarlos en un zip) cuando publicamos una nueva release.</p>
+<p>Los pasos son:</p>
+<ul class="simple">
+<li><p>Etiquetar la versión del proyecto</p></li>
+<li><p>En la web del proyecto, vamos a la sección de tags (https://github.com/IHCantabria/NombreDelProyecto/tags)</p></li>
+<li><p>Selecionamos el tag y en las opciones disponibles está <em>Create release</em>.</p></li>
+<li><p>Asignamos como nombre de release el mismo que tiene como tag, una descripción y debajo de esa caja de texto tendremos la opción de adjuntar binarios.</p></li>
+<li><p>En el README, donde explicamos cómo instalar y usar el proyecto, especificaremos qué deben hacer con esos ficheros.</p></li>
+</ul>
+<p>Nota: Cuando lancemos una nueva release, deberemos adjuntar de nuevo los ficheros.</p>
+<p>En la siguiente ventana vemos cómo para una versión disponemos del código fuente -en formato zip y tar.gz-, y otros dos ficheros que son los binarios que hemos adjuntado.</p>
+<p><img alt="release con binarios" src="../_images/release-binarios.png" /></p>
 </section>
 <section id="otras-buenas-practicas">
 <h2>Otras buenas prácticas<a class="headerlink" href="#otras-buenas-practicas" title="Enlace permanente a este encabezado"></a></h2>
