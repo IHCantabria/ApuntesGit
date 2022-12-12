@@ -49,3 +49,9 @@ Etiqueta un commit con un nombre que decidamos. Le da mayor relevancia y le pode
 Muestra el listado de commits y su información: autor, fecha y mensaje. Muy útil no solo para saber qué cambios ha hecho nuestro compañero sino también cuáles fueron los últimos cambios que hicimos en un proyecto que retomamos.
 
 ![log](imgs/log.png)
+
+----
+
+En el siguiente diagrama vemos las diferentes fases en las que se puede encontrar un fichero y sobre cuáles afecta cada comando:
+
+![comandos-workflow](imgs/comandos-workflow.png "comando").
