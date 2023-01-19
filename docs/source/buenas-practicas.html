@@ -22,7 +22,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Enlaces" href="enlaces.html" />
-    <link rel="prev" title="Flujo de trabajo" href="flujo-trabajo.html" /> 
+    <link rel="prev" title="Versionado semántico" href="versionado-semantico.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,9 +48,12 @@
 <li class="toctree-l1"><a class="reference internal" href="git-configuracion.html">Configuración de git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="github/configuracion.html">Configuración para Github</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flujo-trabajo.html">Flujo de trabajo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trabajo-en-equipo.html">Trabajo en equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versionado-semantico.html">Versionado semántico</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Buenas prácticas</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#readme-md">README.md</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#changelog-md">Changelog.md</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gitignore">.gitignore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#subir-ficheros-binarios">Subir ficheros binarios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#otras-buenas-practicas">Otras buenas prácticas</a></li>
 </ul>
@@ -105,6 +108,11 @@ Aunque la información podría consultarse en el <code class="docutils literal n
 Si usamos trello o planner, normalmente aquí enumeramos el título de las tarjetas realizadas.</p>
 <p><img alt="Changelog" src="../_images/changelog.png" /></p>
 </section>
+<section id="gitignore">
+<h2>.gitignore<a class="headerlink" href="#gitignore" title="Enlace permanente a este encabezado"></a></h2>
+<p>El fichero <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> incluye patrones de los nombres de fichero que no queremos que se añadan al repositorio, como pueden ser ficheros que generan los compiladores o archivos temporales. En <a class="reference external" href="https://github.com/github/gitignore">este repositorio</a> podemos encontrar plantillas de ficheros por lenguaje.<br />
+Además, debemos añadir al listado nuestros ficheros de configuración personal, por ejemplo visual code genera una carpeta llamada <code class="docutils literal notranslate"><span class="pre">.vscode</span></code>, esta configuración que usamos para nosotros crearía conflictos con la configuración de otros compañeros.</p>
+</section>
 <section id="subir-ficheros-binarios">
 <h2>Subir ficheros binarios<a class="headerlink" href="#subir-ficheros-binarios" title="Enlace permanente a este encabezado"></a></h2>
 <p>Para compartir ficheros binarios, como pueden ser datos de input del modelo, en lugar de añadirlos al repositorio como si fuera código fuente, debemos adjuntarlos (podemos juntarlos en un zip) cuando publicamos una nueva release.</p>
@@ -128,6 +136,7 @@ Si usamos trello o planner, normalmente aquí enumeramos el título de las tarje
 <li><p>No añadir binarios al repositorio, especialmente de gran tamaño (vídeos, PDFs).</p></li>
 <li><p>Evitar subir datos sensibles como contraseñas.</p></li>
 <li><p>Evitar reescribir la historia, antes o después nos dará algún disgusto.</p></li>
+<li><p>Añadir en trello/planner la versión que hemos etiquetado en la tarjeta de despliegue o publicación.</p></li>
 </ul>
 </section>
 </section>
@@ -136,7 +145,7 @@ Si usamos trello o planner, normalmente aquí enumeramos el título de las tarje
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="flujo-trabajo.html" class="btn btn-neutral float-left" title="Flujo de trabajo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="versionado-semantico.html" class="btn btn-neutral float-left" title="Versionado semántico" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="enlaces.html" class="btn btn-neutral float-right" title="Enlaces" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

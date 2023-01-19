@@ -24,6 +24,11 @@ Si usamos trello o planner, normalmente aquí enumeramos el título de las tarje
 
 ![Changelog](imgs/changelog.png)
 
+## .gitignore
+
+El fichero `.gitignore` incluye patrones de los nombres de fichero que no queremos que se añadan al repositorio, como pueden ser ficheros que generan los compiladores o archivos temporales. En [este repositorio](https://github.com/github/gitignore) podemos encontrar plantillas de ficheros por lenguaje.  
+Además, debemos añadir al listado nuestros ficheros de configuración personal, por ejemplo visual code genera una carpeta llamada `.vscode`, esta configuración que usamos para nosotros crearía conflictos con la configuración de otros compañeros.
+
 ## Subir ficheros binarios
 
 Para compartir ficheros binarios, como pueden ser datos de input del modelo, en lugar de añadirlos al repositorio como si fuera código fuente, debemos adjuntarlos (podemos juntarlos en un zip) cuando publicamos una nueva release.
@@ -49,3 +54,4 @@ En la siguiente ventana vemos cómo para una versión disponemos del código fue
 - No añadir binarios al repositorio, especialmente de gran tamaño (vídeos, PDFs).
 - Evitar subir datos sensibles como contraseñas.
 - Evitar reescribir la historia, antes o después nos dará algún disgusto.
+- Añadir en trello/planner la versión que hemos etiquetado en la tarjeta de despliegue o publicación.
