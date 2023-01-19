@@ -55,6 +55,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#pull-push"><code class="docutils literal notranslate"><span class="pre">pull</span></code> / <code class="docutils literal notranslate"><span class="pre">push</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag"><code class="docutils literal notranslate"><span class="pre">tag</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#log"><code class="docutils literal notranslate"><span class="pre">log</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rm"><code class="docutils literal notranslate"><span class="pre">rm</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stash"><code class="docutils literal notranslate"><span class="pre">stash</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#revert"><code class="docutils literal notranslate"><span class="pre">revert</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reset"><code class="docutils literal notranslate"><span class="pre">reset</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="github/que-es.html">GitHub</a></li>
@@ -103,6 +107,7 @@
 <section id="add-commit">
 <h2><code class="docutils literal notranslate"><span class="pre">add</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">commit</span></code><a class="headerlink" href="#add-commit" title="Enlace permanente a este encabezado"></a></h2>
 <p>El guardado se realiza en dos pasos, primero debemos especificar cuáles son los ficheros que nos interesan, con <code class="docutils literal notranslate"><span class="pre">add</span></code> los pasaremos a estado <code class="docutils literal notranslate"><span class="pre">staged</span></code>, posteriormente con <code class="docutils literal notranslate"><span class="pre">commit</span></code> confirmamos que queremos grabar esos ficheros, y especificaremos un mensaje.</p>
+<p>Si utilizamos <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">--amend</span></code> reescribiremos el último commit. Es útil para añadir o quitar ficheros y también podremos modificar el mensaje. Es peligroso porque modifica la historia.</p>
 </section>
 <section id="diff">
 <h2><code class="docutils literal notranslate"><span class="pre">diff</span></code><a class="headerlink" href="#diff" title="Enlace permanente a este encabezado"></a></h2>
@@ -111,7 +116,7 @@ Veremos cómo era la línea antigua y cómo es la actual.</p>
 </section>
 <section id="fetch">
 <h2><code class="docutils literal notranslate"><span class="pre">fetch</span></code><a class="headerlink" href="#fetch" title="Enlace permanente a este encabezado"></a></h2>
-<p>Para traernos los cambios del repositorio remoto, pero a diferencia de <code class="docutils literal notranslate"><span class="pre">pull</span></code>, en este caso no hará el <code class="docutils literal notranslate"><span class="pre">merge</span></code> de los ficheros, que será un paso que tengamos que realizar nosotros.</p>
+<p>Para traernos los cambios del repositorio remoto, pero a diferencia de <code class="docutils literal notranslate"><span class="pre">pull</span></code>, en este caso no hará el <code class="docutils literal notranslate"><span class="pre">merge</span></code> de los ficheros, que será un paso que tengamos que realizar nosotros. Si descargamos el main de remoto, nos generará el <code class="docutils literal notranslate"><span class="pre">branch</span></code> llamado <code class="docutils literal notranslate"><span class="pre">origin/main</span></code>.</p>
 </section>
 <section id="branch">
 <h2><code class="docutils literal notranslate"><span class="pre">branch</span></code><a class="headerlink" href="#branch" title="Enlace permanente a este encabezado"></a></h2>
@@ -127,8 +132,9 @@ Veremos cómo era la línea antigua y cómo es la actual.</p>
 </section>
 <section id="pull-push">
 <h2><code class="docutils literal notranslate"><span class="pre">pull</span></code> / <code class="docutils literal notranslate"><span class="pre">push</span></code><a class="headerlink" href="#pull-push" title="Enlace permanente a este encabezado"></a></h2>
-<p>Para traernos los cambios del repositorio remoto, utilizamos el comando <code class="docutils literal notranslate"><span class="pre">pull</span></code>. Descargará la rama especificada y hara un <code class="docutils literal notranslate"><span class="pre">merge</span></code> de los ficheros, las historias de local y remoto quedarán igualadas.
-Cuando queremos enviar las novedades de nuestro repositorio al remoto, utilizaremos el comando <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p>
+<p>Para traernos los cambios del repositorio remoto, utilizamos el comando <code class="docutils literal notranslate"><span class="pre">pull</span></code>. Descargará la rama especificada y hara un <code class="docutils literal notranslate"><span class="pre">merge</span></code> de los ficheros, las historias de local y remoto quedarán igualadas.</p>
+<p>Cuando queremos enviar las novedades de nuestro repositorio al remoto, utilizaremos el comando <code class="docutils literal notranslate"><span class="pre">push</span></code>.<br />
+Con <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">--force</span></code> sobreescribiremos el repositorio remoto con nuestro historial. <strong>Importante</strong>: No habrá forma de revertirlo, es muy peligroso.</p>
 </section>
 <section id="tag">
 <h2><code class="docutils literal notranslate"><span class="pre">tag</span></code><a class="headerlink" href="#tag" title="Enlace permanente a este encabezado"></a></h2>
@@ -138,6 +144,24 @@ Cuando queremos enviar las novedades de nuestro repositorio al remoto, utilizare
 <h2><code class="docutils literal notranslate"><span class="pre">log</span></code><a class="headerlink" href="#log" title="Enlace permanente a este encabezado"></a></h2>
 <p>Muestra el listado de commits y su información: autor, fecha y mensaje. Muy útil no solo para saber qué cambios ha hecho nuestro compañero sino también cuáles fueron los últimos cambios que hicimos en un proyecto que retomamos.</p>
 <p><img alt="log" src="../_images/log.png" /></p>
+</section>
+<section id="rm">
+<h2><code class="docutils literal notranslate"><span class="pre">rm</span></code><a class="headerlink" href="#rm" title="Enlace permanente a este encabezado"></a></h2>
+<p>Elimina el fichero físicamente y a partir del siguiente <code class="docutils literal notranslate"><span class="pre">commit</span></code>. <strong>Importante</strong>: No se elimina de la historia, su contenido seguirá accesible en los anteriores <code class="docutils literal notranslate"><span class="pre">commit</span></code>.</p>
+</section>
+<section id="stash">
+<h2><code class="docutils literal notranslate"><span class="pre">stash</span></code><a class="headerlink" href="#stash" title="Enlace permanente a este encabezado"></a></h2>
+<p>Permite guardar en una pila el estado actual de los ficheros sin realizar un <code class="docutils literal notranslate"><span class="pre">commit</span></code>. Es útil cuando queremos cambiar de <code class="docutils literal notranslate"><span class="pre">branch</span></code> sin guardarlos en la historia. si no se guardan con <code class="docutils literal notranslate"><span class="pre">commit</span></code> o <code class="docutils literal notranslate"><span class="pre">stash</span></code>, impedirá cambiar de branch. Para recuperar los ficheros guardados utilizaremos <code class="docutils literal notranslate"><span class="pre">stash</span> <span class="pre">pop</span></code>.</p>
+</section>
+<section id="revert">
+<h2><code class="docutils literal notranslate"><span class="pre">revert</span></code><a class="headerlink" href="#revert" title="Enlace permanente a este encabezado"></a></h2>
+<p>Cambia el contenido de nuestros ficheros a como se encontraban en el <code class="docutils literal notranslate"><span class="pre">commit</span></code> que le pasemos como parámetro. En lugar de eliminar los <code class="docutils literal notranslate"><span class="pre">commit</span></code> intermedios de la historia, hará uno nuevo.</p>
+</section>
+<section id="reset">
+<h2><code class="docutils literal notranslate"><span class="pre">reset</span></code><a class="headerlink" href="#reset" title="Enlace permanente a este encabezado"></a></h2>
+<p>Si no le pasamos parámetros, limpia la lista de ficheros de <code class="docutils literal notranslate"><span class="pre">stage</span></code>.</p>
+<p>Si le pasamos el parámetro <code class="docutils literal notranslate"><span class="pre">--hard</span> <span class="pre">id</span></code> eliminará los commits hasta llegar a ese, también modificará los ficheros y perderemos los cambios.</p>
+<p>Si le pasamos el parámetro <code class="docutils literal notranslate"><span class="pre">--soft</span> <span class="pre">id</span></code> eliminará los commits hasta llegar a ese pero los ficheros no los modificará.</p>
 <hr class="docutils" />
 <p>En el siguiente diagrama vemos las diferentes fases en las que se puede encontrar un fichero y sobre cuáles afecta cada comando:</p>
 <p><img alt="comandos-workflow" src="../_images/comandos-workflow.png" />.</p>
