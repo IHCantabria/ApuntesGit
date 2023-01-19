@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versionado semántico &mdash; documentación de Apuntes git - ApuntesGit</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Apuntes git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="que-es-y-para-que-sirve.html">Qué es y para qué sirve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comandos.html">Comandos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github/que-es.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-configuracion.html">Configuración de git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github/configuracion.html">Configuración para Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flujo-trabajo.html">Flujo de trabajo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trabajo-en-equipo.html">Trabajo en equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buenas-practicas.html">Buenas prácticas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enlaces.html">Enlaces</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Apuntes git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Versionado semántico</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/versionado-semantico.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="versionado-semantico">
+<h1>Versionado semántico<a class="headerlink" href="#versionado-semantico" title="Enlace permanente a este encabezado"></a></h1>
+<p>Etiquetar versiones es muy importante, pues a la hora de distribuir nuestro código debería ser siempre en versiones concretas.</p>
+<p>Existen diferentes formas de etiquetar, en el IH seguimos el llamado versionado semántico, que tiene publicada la especificación en la siguiente web:</p>
+<p><a class="reference external" href="https://semver.org/">https://semver.org/</a></p>
+<p>En resumen:</p>
+<p>La versión se compone de 3 cifras separadas por <code class="docutils literal notranslate"><span class="pre">.</span></code>. Por ej. <code class="docutils literal notranslate"><span class="pre">2.18.3</span></code>.</p>
+<p>El primer número se denomina <code class="docutils literal notranslate"><span class="pre">MAYOR</span></code>, el segundo <code class="docutils literal notranslate"><span class="pre">MENOR</span></code> y el tercero <code class="docutils literal notranslate"><span class="pre">PARCHE</span></code>. Cuando uno de ellos se incrementa, los de la derecha pasan a <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>Aumentamos la versión <code class="docutils literal notranslate"><span class="pre">MAYOR</span></code> cuando se realiza un cambio incompatible en el API. Esto es, cuando al actualizar el software tenemos que realizar cambios en la forma de invocarlo o en llamadas que realizamos.<br />
+Aumentamos la versión <code class="docutils literal notranslate"><span class="pre">MENOR</span></code> cuando se añaden nuevas funcionalidades y el resto del código sigue siendo compatible con la versión anterior.<br />
+Aumentamos la versión <code class="docutils literal notranslate"><span class="pre">PATCH</span></code> cuando reparamos algún bug y continua la compatibilidad con la versión anterior. Aquí también incluimos cambios en textos, colores, etc.</p>
+<p>Según la especificación, la versión puede llevar como sufijo algunas palabras como <code class="docutils literal notranslate"><span class="pre">ALPHA</span></code>, <code class="docutils literal notranslate"><span class="pre">BETA</span></code>, <code class="docutils literal notranslate"><span class="pre">RC</span></code>, pero nosotros no solemos utilizarlas.</p>
+<section id="ejemplos">
+<h2>Ejemplos<a class="headerlink" href="#ejemplos" title="Enlace permanente a este encabezado"></a></h2>
+<p>Para practicar algunos ejemplos: <em>Ana</em> y <em>Juan</em> llevan meses trabajando en el operacional, han lanzado la versión <code class="docutils literal notranslate"><span class="pre">2.18.3</span></code>.</p>
+<p>Las siguientes tareas -con sus versiones- que realizarán son:</p>
+<ul class="simple">
+<li><p>Nueva fuente de datos al operacional.</p></li>
+<li><p>Cambian los colores de las gráficas.</p></li>
+<li><p>Permiten al usuario elegir los colores y corrigen el valor el color “rojo”.</p></li>
+<li><p>Cambian textos en leyenda y renombran funciones del script de ejecución.</p></li>
+<li><p>Admiten nuevo formato de datos si el usuario usa el parámetro <code class="docutils literal notranslate"><span class="pre">--input-format=</span></code></p></li>
+</ul>
+<p>Soluciones:</p>
+<ul class="simple">
+<li><p><em>Nueva fuente de datos al operacional</em>. Se trata de una funcionalidad por lo que es un cambio <code class="docutils literal notranslate"><span class="pre">MENOR</span></code>, la nueva versión se etiqueta como <code class="docutils literal notranslate"><span class="pre">2.19.0</span></code>.</p></li>
+<li><p><em>Cambian los colores de las gráficas</em>. Se trata de cambios que no afectan al funcionamiento, por lo tanto entra en la categoría de <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">2.19.1</span></code>.</p></li>
+<li><p><em>Permiten al usuario elegir los colores y corrigen el valor el color “rojo”</em>. Se trata de dos cambios pero solo se etiqueta una vez, por tanto tomamos el cambio de mayor importancia, en este caso el permitir al usuario elegir colores es una nueva funcionalidad (<code class="docutils literal notranslate"><span class="pre">MENOR</span></code>) es más importante que corregir un valor (<code class="docutils literal notranslate"><span class="pre">PATCH</span></code>), <code class="docutils literal notranslate"><span class="pre">2.20.0</span></code></p></li>
+<li><p><em>Cambian textos en leyenda y renombran funciones del script de ejecución</em>. Aquí también tenemos dos funcionalidades. Renombrar funciones del script provoca que no funcione con versiones anteriores por lo que es un cambio <code class="docutils literal notranslate"><span class="pre">MAYOR</span></code>. <code class="docutils literal notranslate"><span class="pre">3.0.0</span></code></p></li>
+<li><p><em>Admiten nuevo formato de datos si el usuario usa el parámetro <code class="docutils literal notranslate"><span class="pre">--input-format=</span></code></em>. Aquí también modificamos el API pero éste sigue siendo compatible con el anterior, por lo que se trata de <code class="docutils literal notranslate"><span class="pre">MENOR</span></code>. <code class="docutils literal notranslate"><span class="pre">3.1.0</span></code>.</p></li>
+</ul>
+</section>
+<section id="etiquetar-desde-github">
+<h2>Etiquetar desde GitHub<a class="headerlink" href="#etiquetar-desde-github" title="Enlace permanente a este encabezado"></a></h2>
+<p>Desde el cliente de git podemos crear tags y subirlos con <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--tags</span></code>, pero desde la interfaz de GitHub podemos trabajar con el concepto de <code class="docutils literal notranslate"><span class="pre">Releases</span></code>, que no es propio de git sino que es un etiquetado vitaminado, ya que permite añadirle más información y adjuntar ficheros.</p>
+<p>Desde la página del proyecto, en la parte derecha disponemos de información sobre las Releases y una vez en la sección podemos crear una nueva release que a su vez genera un <code class="docutils literal notranslate"><span class="pre">tag</span></code> si lo creamos desde el <code class="docutils literal notranslate"><span class="pre">branch</span></code>.</p>
+<p><img alt="Vista de proyecto" src="../_images/githubReleases1.png" /></p>
+<p><img alt="Nueva release" src="../_images/githubReleases2.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Felipe Maza.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

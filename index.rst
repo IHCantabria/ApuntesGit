@@ -17,5 +17,6 @@ Apuntes de git
    source/github/configuracion.md
    source/flujo-trabajo.md
    source/trabajo-en-equipo.md
+   source/versionado-semantico.md
    source/buenas-practicas.md
    source/enlaces.md
