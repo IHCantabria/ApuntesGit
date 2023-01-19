@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo en equipo &mdash; documentación de Apuntes git - ApuntesGit</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Buenas prácticas" href="buenas-practicas.html" />
+    <link rel="prev" title="Flujo de trabajo" href="flujo-trabajo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Apuntes git
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que-es-y-para-que-sirve.html">Qué es y para qué sirve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comandos.html">Comandos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github/que-es.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-configuracion.html">Configuración de git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github/configuracion.html">Configuración para Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flujo-trabajo.html">Flujo de trabajo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Trabajo en equipo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dar-permisos-en-github">Dar permisos en GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#caso-de-ejemplo">Caso de ejemplo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#semana-1">Semana 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#semana-2">Semana 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#semana-3">Semana 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buenas-practicas.html">Buenas prácticas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enlaces.html">Enlaces</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Apuntes git</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Trabajo en equipo</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/trabajo-en-equipo.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="trabajo-en-equipo">
+<h1>Trabajo en equipo<a class="headerlink" href="#trabajo-en-equipo" title="Enlace permanente a este encabezado"></a></h1>
+<p>Cuando trabajamos en un repositorio con más gente nos podemos encontrar ciertos conflictos con el código subido al repositorio remoto.</p>
+<p>A través de unos ejemplos vamos a ver las situaciones que se pueden dar cuando trabajamos en equipo:</p>
+<ul class="simple">
+<li><p>Trabajan con diferentes ficheros, por lo cual es fácil resolver los conflictos.</p></li>
+<li><p>Trabajan modificando ficheros en común, hay que resolver manualmente los conflictos.</p></li>
+</ul>
+<section id="dar-permisos-en-github">
+<h2>Dar permisos en GitHub<a class="headerlink" href="#dar-permisos-en-github" title="Enlace permanente a este encabezado"></a></h2>
+<p>Por defecto, cuando hagamos un repositorio en GitHub todos los usuarios de la organización tendrán derechos de lectura pero no de escritura. Desde <code class="docutils literal notranslate"><span class="pre">Settings</span></code> del proyecto, <code class="docutils literal notranslate"><span class="pre">Collaborations</span> <span class="pre">and</span> <span class="pre">teams</span></code> podremos añadir tanto grupos completos o personas que no tienen por qué pertenecer a nuestra organización con derechos de escritura o superiores.</p>
+<p><img alt="Captura de github" src="../_images/collaboratos_and_teams.png" /></p>
+</section>
+<section id="caso-de-ejemplo">
+<h2>Caso de ejemplo<a class="headerlink" href="#caso-de-ejemplo" title="Enlace permanente a este encabezado"></a></h2>
+<p>Tenemos a dos desarrolladores que llamaremos <em>Ana</em>  y <em>Juan</em> que van a programar un operacional. Cada semana se les asignarán ciertas tareas:</p>
+<section id="semana-1">
+<h3>Semana 1<a class="headerlink" href="#semana-1" title="Enlace permanente a este encabezado"></a></h3>
+<ul class="simple">
+<li><p>Ana</p>
+<ul>
+<li><p>Crea la carpeta del proyecto con los ficheros iniciales (<code class="docutils literal notranslate"><span class="pre">README.md</span></code>, <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>, etc.).</p></li>
+<li><p>Inicializa el repositorio y lo sube a github (<code class="docutils literal notranslate"><span class="pre">init</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">url</span></code>).</p></li>
+<li><p>Desarrolla script para ejecución del operacional. Guarda cambios (<code class="docutils literal notranslate"><span class="pre">commit</span></code>).</p></li>
+<li><p>Subir cambios al repositorio (<code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">master</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+<p>En este caso no hay conflictos, <em>Ana</em>  ha trabajado de manera individual.</p>
+</section>
+<section id="semana-2">
+<h3>Semana 2<a class="headerlink" href="#semana-2" title="Enlace permanente a este encabezado"></a></h3>
+<ul class="simple">
+<li><p>Ana</p>
+<ul>
+<li><p>Continúa con el script de ejecución.</p></li>
+<li><p>Guarda los cambios varias veces a la semana (<code class="docutils literal notranslate"><span class="pre">commit</span></code>).</p></li>
+<li><p>El viernes sube los datos al repositorio (<code class="docutils literal notranslate"><span class="pre">push</span></code>).</p></li>
+</ul>
+</li>
+<li><p>Juan</p>
+<ul>
+<li><p>Descarga el repositorio (<code class="docutils literal notranslate"><span class="pre">clone</span></code>).</p></li>
+<li><p>Desarrolla módulo para gráficos.</p></li>
+<li><p>Guarda los datos el miércoles (<code class="docutils literal notranslate"><span class="pre">commit</span></code>) y lo sube (<code class="docutils literal notranslate"><span class="pre">push</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+<p>En este caso, <em>Ana</em> va a recibir un mensaje de error cuando intente realizar el <code class="docutils literal notranslate"><span class="pre">push</span></code>.</p>
+<p><img alt="Juan Semana 2" src="../_images/juanS2a.PNG" /></p>
+<p><img alt="Ana Semana 2" src="../_images/anaS2a.PNG" /></p>
+<p>Como podemos ver, en la historia ambos parten de un commit (<code class="docutils literal notranslate"><span class="pre">8e1468a</span></code>) pero luego cada uno tiene sus propios commits.<br />
+Cuando <em>Ana</em> intenta subir sus cambios, el repositorio remoto tiene el <code class="docutils literal notranslate"><span class="pre">commit</span></code> de Juan y no sabe cómo introducir los nuevos cambios, pues no existe una continuidad en los <code class="docutils literal notranslate"><span class="pre">commit</span></code>.</p>
+<p>La solución es descargarse los cambios a un <code class="docutils literal notranslate"><span class="pre">branch</span></code> e introducirlo en su historia. Para ello usaremos los siguientes comandos:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code> para descargar los ficheros, quedarán en un <code class="docutils literal notranslate"><span class="pre">branch</span></code> llamado <code class="docutils literal notranslate"><span class="pre">origin/main</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">origin/main</span></code> para aplanar los commits.</p></li>
+</ul>
+<p><img alt="flujo rebase" src="../_images/01_What_is_git_rebase.png" /></p>
+<p>Rebase tomará los commits del branch y los colocará tras el commit en común, a continuación modificará los commits nuestros para que sean a partir del nuevo <code class="docutils literal notranslate"><span class="pre">commit</span></code>. Ahora ya podrá subir los datos con <code class="docutils literal notranslate"><span class="pre">push</span></code> pues los nuevos commits son a partir de los que ya existen en el repositorio.</p>
+</section>
+<section id="semana-3">
+<h3>Semana 3<a class="headerlink" href="#semana-3" title="Enlace permanente a este encabezado"></a></h3>
+<ul class="simple">
+<li><p>Ana</p>
+<ul>
+<li><p>Comprueba que no haya novedades en GitHub (<code class="docutils literal notranslate"><span class="pre">pull</span></code>).</p></li>
+<li><p>Más avances en el script</p></li>
+<li><p>Añade leyenda en las gráficas.</p></li>
+<li><p>Guarda los datos entre semana y el viernes sube los datos al repositorio (<code class="docutils literal notranslate"><span class="pre">push</span></code>).</p></li>
+</ul>
+</li>
+<li><p>Juan</p>
+<ul>
+<li><p>Actualiza el repositorio (<code class="docutils literal notranslate"><span class="pre">pull</span></code>).</p></li>
+<li><p>Nuevo módulo para informes.</p></li>
+<li><p>Modifica las gráficas para disponer de más tipo de gráfico.</p></li>
+<li><p>Guarda los datos el miércoles (<code class="docutils literal notranslate"><span class="pre">commit</span></code>) y lo sube (<code class="docutils literal notranslate"><span class="pre">push</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+<p>Al igual que en la seman anterior, <em>Ana</em> encontrará problemas para subir sus cambios por el mismo motivo.</p>
+<p>En este caso, tras el <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>, el <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span></code> no tendrá éxito porque hay un fichero en común que se modifica por lo que el usuario deberá especificar qué cambios deben quedar, si los de <em>Juan</em> (<code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">Change</span></code>) o los de <em>Ana</em> (<code class="docutils literal notranslate"><span class="pre">Incoming</span> <span class="pre">Change</span></code>), o bien ambos o un nuevo código.</p>
+<p>Herramientas visuales ayudan mucho a hacer este trabajo, pues desde un editor de texto sin mejoras es bastante farragoso. VSCode incluye algunas visualizaciones que nos ayudarán mucho:</p>
+<p><img alt="Resolver conflicto texto" src="../_images/resolver_conflicto1.png" /></p>
+<p><img alt="Resolver conflicto visual" src="../_images/resolver_conflicto2.png" /></p>
+<p>Una vez guardado el fichero final, añadiremos un mensaje y ya podremos subir los cambios al repositorio remoto.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="flujo-trabajo.html" class="btn btn-neutral float-left" title="Flujo de trabajo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="buenas-practicas.html" class="btn btn-neutral float-right" title="Buenas prácticas" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Felipe Maza.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
